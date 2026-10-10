@@ -33,8 +33,8 @@ export default function Home() {
   }, [index])
 
   const quickLinks = [
-    { img: githubLogo, link: 'https://github.com/sachinyaduvanshi0002/' },
-    { img: linkedinLogo, link: 'https://www.linkedin.com/in/sachin-kumar-42756a364' },
+    { img: githubLogo, link: 'https://github.com/sachinydv0002/' },
+    { img: linkedinLogo, link: 'https://www.linkedin.com/in/sachinydv0002/' },
     { img: gmailLogo, link: 'mailto:sachincseiot@gmail.com' },
     { img: whatsappLogo, link: 'https://wa.me/917549171480' },
     { img: instagramLogo, link: 'https://www.instagram.com/sachin_yaduvanshi0002/' },

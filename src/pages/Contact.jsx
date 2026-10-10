@@ -67,8 +67,8 @@ export default function Contact() {
   };
 
   const quickLinks = [
-    { title: 'GitHub', img: githubLogo, link: 'https://github.com/sachinyaduvanshi0002/' },
-    { title: 'LinkedIn', img: linkedinLogo, link: 'https://www.linkedin.com/in/sachin-kumar-42756a364' },
+    { title: 'GitHub', img: githubLogo, link: 'https://github.com/sachinydv0002/' },
+    { title: 'LinkedIn', img: linkedinLogo, link: 'https://www.linkedin.com/in/sachinydv0002/' },
     { title: 'Email', img: gmailLogo, link: 'mailto:sachincseiot@gmail.com' },
     { title: 'WhatsApp', img: whatsappLogo, link: 'https://wa.me/917549171480' },
     { title: 'Instagram', img: instagramLogo, link: 'https://www.instagram.com/sachin_yaduvanshi0002/' },

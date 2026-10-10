@@ -5,6 +5,15 @@ import "../CSS/projects.css";
 
 const PROJECTS = [
   {
+    category: 'ai',
+    title: '🤖 Siva-AI - Full-Stack AI Assistant',
+    desc: 'AI-powered assistant built with React.js, FastAPI, Gemini API, and MongoDB, designed to deliver intelligent conversations and institute-specific AI experiences.',
+    ss: '/siva-ai.png',
+    tech: ['React.js', 'Python', 'FastAPI', 'Gemini API', 'MongoDB'],
+    live: '#',
+    code: 'https://github.com/sachinydv0002/Siva-AI'
+  },
+  {
     category: 'web',
     title: '🛒 ByteBazaar - PERN Stack E-Commerce App',
     desc: 'Modern full-stack e-commerce-style app built with PERN stack, featuring dynamic UI, secure APIs, and cloud deployment.',

@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Resume() {
-  const resumePath = "/resume.pdf";
+  const resumePath = "/Resume-Sachin-Kumar.pdf";
   const [useRemoteViewer, setUseRemoteViewer] = useState(false);
 
   const googleViewerUrl = useMemo(() => {
