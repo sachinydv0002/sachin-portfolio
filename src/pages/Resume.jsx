@@ -1,27 +1,13 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 
 export default function Resume() {
   const resumePath = "/Resume-Sachin-Kumar.pdf";
-  const [useRemoteViewer, setUseRemoteViewer] = useState(false);
 
   const googleViewerUrl = useMemo(() => {
     if (typeof window === "undefined") return "";
     const absoluteResumeUrl = `${window.location.origin}${resumePath}`;
     return `https://docs.google.com/gview?embedded=1&url=${encodeURIComponent(absoluteResumeUrl)}`;
-  }, []);
-
-  useEffect(() => {
-    const updateViewerMode = () => {
-      const isNarrow = window.innerWidth <= 1024;
-      const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
-      setUseRemoteViewer(isNarrow || isCoarsePointer);
-    };
-
-    updateViewerMode();
-    window.addEventListener("resize", updateViewerMode);
-
-    return () => window.removeEventListener("resize", updateViewerMode);
   }, []);
 
   return (
@@ -246,23 +232,15 @@ export default function Resume() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
-          {useRemoteViewer ? (
+          <object data={`${resumePath}#view=FitH`} type="application/pdf" className="resume-viewer__pdf" aria-label="Resume preview">
             <iframe
               src={googleViewerUrl || resumePath}
               title="Sachin Kumar Resume"
               className="resume-viewer__pdf"
             />
-          ) : (
-            <object data={`${resumePath}#view=FitH`} type="application/pdf" className="resume-viewer__pdf" aria-label="Resume preview">
-              <iframe
-                src={googleViewerUrl || resumePath}
-                title="Sachin Kumar Resume"
-                className="resume-viewer__pdf"
-              />
-            </object>
-          )}
+          </object>
 
-          <div className="resume-viewer__fallback">
+          <div className="resume-viewer__fallback" style={{ display: "flex" }}>
             <a href={resumePath} target="_blank" rel="noreferrer" className="btn">
               Open Resume in New Tab
             </a>
@@ -271,7 +249,7 @@ export default function Resume() {
 
         {/* Download Button */}
         <motion.a
-          href="/resume.pdf"
+          href="/Resume-Sachin-Kumar.pdf"
           download
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
